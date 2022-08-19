@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form action="" method="get">
+ <table width="300" border="1">
+  <tr><td>email</td>
+     <td>password</td>
+
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ i['EMAIL'] }}</td>
+      <td>{{ i['PASSWORD'] }}</td>
+      <td><a href="approve_req/{{ i['id'] }}">Approve</a></td>
+        <td><a href="">Deny</a></td>
+
+
+
+  </tr>
+    {% endfor %}
+</table>
+
+ </form>
+</body>
+</html>

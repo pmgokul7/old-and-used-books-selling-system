@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="300" border="1">
+    <tr>
+      <th scope="row">#</th>
+         <td>CATEGORY_name</td>
+      <td>&nbsp;</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <th scope="row">&nbsp;</th>
+         <td>{{ i['category'] }}</td>
+      <td><a href="/delete_category/{{ i['category_id'] }}">DELETE</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+    <a href="/add">add_category</a>
+</form>
+</body>
+</html>
